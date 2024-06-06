@@ -26,14 +26,16 @@ fun main(args: Array<String>) {
     for (num in mySmallSquaredNums) {
         println(num)
     }
-    var people = listOf<Person>(Person(10, "Abrar"), Person(23, "Emon"), Person(70, "Dadu"))
-    var names = people.map { it.name }
+    var people = listOf<Person2>(Person2(10, "Abrar"), Person2(23, "Emon"), Person2(70, "Rana"))
+    var names = people.filter { it.name.startsWith("E")}
+                                  .map { it.name }
+
 
     for (name in names) {
         println(name)
     }
 }
 
-class Person(var age: Int, var name: String) {
+class Person2(var age: Int, var name: String) {
 
 }
